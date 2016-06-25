@@ -61,7 +61,7 @@ public class TrafficSimulation {
 
         boolean TEST_MODEL;
         
-        TEST_MODEL = true;
+        TEST_MODEL = false;
         
         if (TEST_MODEL)
             testModel();                // test the model
@@ -219,7 +219,7 @@ public class TrafficSimulation {
         PrintWriter writer;
         try {
             writer = new PrintWriter(filename, "UTF-8");
-            writer.println("model, road_block, max_speed_slow, max_speed_fast, fast_car_ratio, density, total_all_cars_distance, total_slow_cars_distance, total_fast_cars_distance, worst_case_distance_slow_cars, worst_cast_distance_fast_cars, best_case_distance_slow_car, best_case_distance_fast_car,num_slow_cars,num_fast_cars,global_speed_rule,repetition,slack,distance_look_ahead,max_speed_slow_car");
+            writer.println("model, road_block, max_speed_slow, max_speed_fast, fast_car_ratio, density, total_all_cars_distance, total_slow_cars_distance, total_fast_cars_distance, worst_case_distance_slow_cars, worst_cast_distance_fast_cars, best_case_distance_slow_car, best_case_distance_fast_car,num_slow_cars,num_fast_cars,global_speed_rule,speed_slow,speed_fast,repetition,slack,distance_look_ahead");
             for (int distance : arrDistanceLookAhead) {
                 for (int slack : slacks) {
                     DISTANCE_TO_LOOK_AHEAD = distance;

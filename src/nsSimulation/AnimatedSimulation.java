@@ -169,12 +169,12 @@ final public class AnimatedSimulation {
         }
         totalDistance = totalSlowDistance + totalFastDistance;  // do not count that of broken car
 
-        //model, road_block, max_speed_slow, max_speed_fast, fast_car_ratio, density, total_all_cars_distance, total_slow_cars_distance, total_fast_cars_distance, worst_case_distance_slow_cars, worst_cast_distance_fast_cars, best_case_distance_slow_car, best_case_distance_fast_car,num_slow_cars,num_fast_cars,global_rule,repetition,slack,distance_look_ahead,max_speed_slow_car
+        //model, road_block, max_speed_slow, max_speed_fast, fast_car_ratio, density, total_all_cars_distance, total_slow_cars_distance, total_fast_cars_distance, worst_case_distance_slow_cars, worst_cast_distance_fast_cars, best_case_distance_slow_car, best_case_distance_fast_car,num_slow_cars,num_fast_cars,global_rule,speed_slow,speed_fast,repetition,slack,distance_look_ahead
         return ("NS," + (TrafficSimulation.BREAKING_DOWN_PROBABILITY == 0 ? "0" : "1") + "," + maxSpeedSlow + "," + maxSpeedFast + "," +
 			TrafficSimulation.FAST_CAR_RATIO + "," + TrafficSimulation.DENSITY + "," + totalDistance + "," + totalSlowDistance + "," +
 			totalFastDistance + "," +  worstFlowSlow + "," + worstFlowFast + "," + bestFlowSlow + "," + bestFlowFast + "," + numSlow + "," +
-			numFast + "," + TrafficSimulation.GLOBAL_SPEED_RULE + "," + repetition + "," + TrafficSimulation.SLACK + "," + TrafficSimulation.DISTANCE_TO_LOOK_AHEAD + "," +
-			TrafficSimulation.MAX_SPEED_SLOW_CAR);        
+			numFast + "," + TrafficSimulation.GLOBAL_SPEED_RULE + "," + TrafficSimulation.MAX_SPEED_SLOW_CAR  + "," +
+                        TrafficSimulation.MAX_SPEED_FAST_CAR + ","  + repetition + "," + TrafficSimulation.SLACK + "," + TrafficSimulation.DISTANCE_TO_LOOK_AHEAD);        
     }
     
 }
